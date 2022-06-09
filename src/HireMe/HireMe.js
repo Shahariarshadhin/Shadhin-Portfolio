@@ -2,23 +2,33 @@ import React, { useRef } from 'react';
 import { HiMailOpen } from "react-icons/hi";
 import { IoIosCall } from "react-icons/io";
 import { FaAddressCard } from "react-icons/fa";
-import emailjs from '@emailjs/browser';
+import emailjs, { init } from '@emailjs/browser';
+import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 
 
 const HireMe = () => {
-    const form = useRef();
 
-    function sendEmail(e) {
-        e.preventDefault();
-        emailjs.sendForm('gmail', e.target, 'template_y44oye2', 'SxAeglmW2zVXD_Dwm', form.current)
+    init("SxAeglmW2zVXD_Dwm");
+
+    const { register, handleSubmit } = useForm();
+
+    const onSubmit = (data) => {
+        emailjs.sendForm('gmail', 'template_y44oye2', '#contact-form')
             .then((result) => {
                 console.log(result.text);
+                toast.success('Message Send Succefully')
             }, (error) => {
                 console.log(error.text);
             });
-        e.target.reset()
+
     }
+
+    // function sendEmail(e) {
+    //     e.preventDefault();
+
+    // }
     return (
         <div>
             <div class="hero min-h-screen ">
@@ -26,31 +36,18 @@ const HireMe = () => {
 
 
                     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
-                        <form ref={form} onSubmit={sendEmail}>
-                            <div class="card-body">
-                                <div class="form-control mb-4">
 
-                                    <input type="text" name='name' placeholder="Your Name" class="input input-bordered input-accent bg-[#000000]" />
-                                </div>
-                                <div class="form-control mb-4">
+                        <div class="card-body">
 
-                                    <input type="text" name='email' placeholder="Your Email" class="input input-bordered input-accent bg-[#000000]" />
-                                </div>
-                                <div class="form-control mb-4">
+                            <form className='w-full max-w-xs' id='contact-form' onSubmit={handleSubmit(onSubmit)}>
+                                <input className='input input-bordered input-accent w-full max-w-xs bg-[#000000] mb-4' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+                                <input className='input input-bordered input-accent w-full max-w-xs bg-[#000000] mb-4' placeholder='Email ' type="email" {...register("email")} />
+                                <input className='input input-bordered input-accent w-full max-w-xs bg-[#000000] mb-4' placeholder='Write a subject' type="text" {...register("subject")} />
+                                <textarea className='input input-bordered input-accent w-full max-w-xs bg-[#000000] mb-4' placeholder='Your Message' {...register("message")} />
+                                <input class="btn btn-outline btn-success" value="Send Message" type="submit" />
+                            </form>
 
-                                    <input type="text" name='subject' placeholder="Write a Subject" class="input input-bordered input-accent bg-[#000000]" />
-                                </div>
-                                <div class="form-control mb-4">
-
-                                    <textarea type="text" name='message' placeholder="Your Message" class="input input-bordered textarea-accent bg-[#000000]" />
-                                </div>
-
-                                <div class="form-control mt-6">
-                                    {/* <button class="btn btn-outline btn-success">Send Message</button> */}
-                                    <input type="submit" class="btn btn-outline btn-success" value="Send Message" />
-                                </div>
-                            </div>
-                        </form>
+                        </div>
                     </div>
 
 
@@ -80,3 +77,30 @@ const HireMe = () => {
 };
 
 export default HireMe;
+
+
+// <form ref={form} onSubmit={sendEmail}>
+//                             <div class="card-body">
+//                                 <div class="form-control mb-4">
+
+//                                     <input type="text" name='name' placeholder="Your Name" class="input input-bordered input-accent bg-[#000000]" />
+//                                 </div>
+//                                 <div class="form-control mb-4">
+
+//                                     <input type="text" name='email' placeholder="Your Email" class="input input-bordered input-accent bg-[#000000]" />
+//                                 </div>
+//                                 <div class="form-control mb-4">
+
+//                                     <input type="text" name='subject' placeholder="Write a Subject" class="input input-bordered input-accent bg-[#000000]" />
+//                                 </div>
+//                                 <div class="form-control mb-4">
+
+//                                     <textarea type="text" name='message' placeholder="Your Message" class="input input-bordered textarea-accent bg-[#000000]" />
+//                                 </div>
+
+//                                 <div class="form-control mt-6">
+//                                     {/* <button class="btn btn-outline btn-success">Send Message</button> */}
+//                                     <input type="submit" class="btn btn-outline btn-success" value="Send Message" />
+//                                 </div>
+//                             </div>
+//                         </form>
