@@ -6,10 +6,10 @@ const Navbar = () => {
     const menubar = <>
 
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/appointment">About</Link></li>
-        <li><Link to="/review">Services</Link></li>
-        <li><Link to="/review">Portfolio</Link></li>
-        <li><Link to="/about">Blog</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/service">Services</Link></li>
+        <li><Link to="/portfolio">Portfolio</Link></li>
+        <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/contact">Contact</Link></li>
 
 

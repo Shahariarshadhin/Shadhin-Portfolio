@@ -3,6 +3,7 @@ import './MyProject.css'
 import project_1 from '../images/project_1.png'
 import project_2 from '../images/project_2.png'
 import project_3 from '../images/project_3.png'
+import { Link } from 'react-router-dom';
 
 const MyProject = () => {
     return (
@@ -22,7 +23,9 @@ const MyProject = () => {
                             using MERN Stack Technology
                         </p>
                         <div class="card-actions">
-                            <button class="btn btn-outline btn-warning">View Details</button>
+
+                            <Link class="btn btn-outline btn-warning" to="/projectCCC">View Details</Link>
+
 
                         </div>
                     </div>
