@@ -1,6 +1,6 @@
 import React from 'react';
 import myImage from '../../images/myImage.png'
-import resume from '../../document/Shahariar Hasan Shadhin - Resume.pdf'
+import resume from '../../document/Shahariar Hasan Shadhin-WD-N.pdf'
 import About from '../About/About';
 import MyProject from '../../MyProject/MyProject';
 import HireMe from '../../HireMe/HireMe';
@@ -22,7 +22,7 @@ const Home = () => {
 
                     </div>
                     <div class="avatar">
-                        <div class="lg:w-[500px] rounded-full">
+                        <div class="lg:w-[500px] rounded-[150px]">
                             <img src={myImage} class="max-w-sm rounded-lg shadow-2xl" alt='' />
                         </div>
                     </div>

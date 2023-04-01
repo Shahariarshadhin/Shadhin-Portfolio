@@ -9,13 +9,13 @@ const MyProject = () => {
     return (
 
 
-        <div className='lg:px-48 text-white'>
+        <div className='lg:px-48 text-white' id='myProject'>
             <h1 class="text-4xl lg:text-5xl font-bold font-black text-white">My Latest Project</h1>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 mt-20'>
-                <div class="card w-96    shadow-xl">
+                <div class="card     shadow-xl">
                     <figure class="px-10 pt-10 hoverCard">
-                        <img src={project_1} alt="Shoes" class="rounded-xl" />
+                        <img src={project_1} alt="Shoes" class="rounded-xl h-96  w-96" />
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Core Computer Castle</h2>
@@ -33,9 +33,9 @@ const MyProject = () => {
 
 
 
-                <div class="card w-96  shadow-xl">
+                <div class="card   shadow-xl">
                     <figure class="px-10 pt-10 hoverCard">
-                        <img src={project_2} alt="Shoes" class="rounded-xl" />
+                        <img src={project_2} alt="Shoes" class="rounded-xl h-96 w-96" />
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Camping Cove</h2>
@@ -43,16 +43,16 @@ const MyProject = () => {
                             Stack Technology
                         </p>
                         <div class="card-actions">
-                            <button class="btn btn-outline btn-warning">View Details</button>
+                            <Link class="btn btn-outline btn-warning" to="/projectCamCove">View Details</Link>
                         </div>
                     </div>
                 </div>
 
 
 
-                <div class="card w-96  shadow-xl">
+                <div class="card   shadow-xl">
                     <figure class="px-10 pt-10 hoverCard">
-                        <img src={project_3} alt="Shoes" class="rounded-xl" />
+                        <img src={project_3} alt="Shoes" class="rounded-xl h-96  w-96" />
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Travelo</h2>
@@ -60,7 +60,7 @@ const MyProject = () => {
 
                         </p>
                         <div class="card-actions">
-                            <button class="btn btn-outline btn-warning">View Details</button>
+                            <Link class="btn btn-outline btn-warning" to="/travelo">View Details</Link>
 
                         </div>
                     </div>

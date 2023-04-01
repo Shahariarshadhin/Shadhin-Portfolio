@@ -1,54 +1,47 @@
 import React from 'react';
-import project_111 from '../images/project_111.png'
-import project_11 from '../images/project_11.png'
-import project_12 from '../images/project_12.png'
-import project_13 from '../images/project_13.png'
-import project_14 from '../images/project_14.png'
-import project_15 from '../images/project_15.png'
-import project_16 from '../images/project_16.png'
+import project_21 from '../images/project_21.png'
+import project_22 from '../images/project_22.png'
+import project_23 from '../images/project_23.png'
+import project_24 from '../images/project_24.png'
+import project_25 from '../images/project_25.png'
 
-const ProjectCCC = () => {
+const ProjectCamCove = () => {
     return (
         <div>
 
-            <h1 class="text-4xl lg:text-5xl font-bold font-black text-white mb-10 mt-4">Core Computer Castle</h1>
-            <a className=' text-info text-xl' href="https://core-computer-castle.web.app/" target="_blank" rel="noreferrer">Live Preview</a>
+            <h1 class="text-4xl lg:text-5xl font-bold font-black text-white mb-10 mt-4">Camping Cove</h1>
+            <a className=' text-info text-xl' href="https://camping-cove.web.app/" target="_blank" rel="noreferrer">Live Preview</a>
 
 
             <div className='grid lg:grid-cols-3 gap-10 mt-28 lg:px-24'>
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={project_111} alt="Shoes" /></figure>
+                    <figure><img src={project_21} alt="Shoes" /></figure>
                 </div>
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={project_11} alt="Shoes" /></figure>
+                    <figure><img src={project_22} alt="Shoes" /></figure>
                 </div>
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={project_12} alt="Shoes" /></figure>
+                    <figure><img src={project_23} alt="Shoes" /></figure>
                 </div>
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={project_13} alt="Shoes" /></figure>
+                    <figure><img src={project_24} alt="Shoes" /></figure>
                 </div>
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={project_14} alt="Shoes" /></figure>
+                    <figure><img src={project_25} alt="Shoes" /></figure>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={project_15} alt="Shoes" /></figure>
-                </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={project_16} alt="Shoes" /></figure>
-                </div>
+
 
             </div>
 
             <div>
-                <h1 class="text-2xl lg:text-3xl font-bold font-black text-white mb-10 mt-4">Project Details</h1>
+                <h1 class="text-2xl lg:text-3xl font-bold font-black text-white mb-10 mt-12">Project Details</h1>
                 <div className='grid lg:grid-cols-4  mt-10 gap-5 lg:px-20 '>
                     <div>
                         <div class="card w-80 h-96 text-white border-2 border-accent border-opacity-75  shadow-xl">
                             <div class="card-body ">
                                 <h2 class="title text-2xl font-bold text-center">Project Overview</h2>
-                                <p className='text-left'>This is a tech electronics parts manufacturer web application
-                                    using MERN Stack Technology.Here you can find wholesale parts of computer for manufacturing.There are two section of admin and user admin can update product and make normal user to admin.Admin and user need to login for their website activities.This site is fully responsive for mobile and large device.</p>
+                                <p className='text-left'>This is an inventory management web application using MERN
+                                    Stack Technology.Here you can find all your camping gears as wholesale.User can add new items also update quantity and delete items.There are also some Camping related guiding knowledge also added.</p>
 
                             </div>
                         </div>
@@ -60,11 +53,10 @@ const ProjectCCC = () => {
                                 <ul className='text-left'>
                                     <li>● User Authentication</li>
                                     <li>● Product buying system</li>
-                                    <li>● Dashboard for admin and user</li>
-                                    <li>● Admin can update product quantity</li>
-                                    <li>● Admin can make another user admin</li>
-                                    <li>● User Can Add their Review</li>
-                                    <li>● Card Payment system</li>
+                                    <li>● User can see their items</li>
+                                    <li>● Update product quantity</li>
+                                    <li>● Add New Items</li>
+                                    <li>● Camping guide article</li>
 
                                 </ul>
 
@@ -76,11 +68,11 @@ const ProjectCCC = () => {
                             <div class="card-body">
                                 <h2 class="title text-2xl font-bold text-center mb-8">Technologies</h2>
                                 <ul>
-                                    <div className='flex gap-14'>
-                                        <div className='ml-6'>
+                                    <div className='ml-6 '>
+                                        <div className=''>
                                             <li><a className=' text-info text-xl' href="https://reactjs.org/" target="_blank" rel="noreferrer">React js</a></li>
-                                            <li><a className=' text-info text-xl' href="https://daisyui.com/" target="_blank" rel="noreferrer">DaisyUi</a></li>
-                                            <li><a className=' text-info text-xl' href="https://v1.tailwindcss.com/" target="_blank" rel="noreferrer">Tailwind</a></li>
+                                            <li><a className=' text-info text-xl' href="https://react-bootstrap.github.io/" target="_blank" rel="noreferrer">React Bootstrap</a></li>
+                                            <li><a className=' text-info text-xl' href="https://react-hook-form.com/" target="_blank" rel="noreferrer">React Hook Form</a></li>
                                             <li><a className=' text-info text-xl' href="https://firebase.google.com/?hl=en&authuser=0" target="_blank" rel="noreferrer">Firebase</a></li>
                                         </div>
                                         <div>
@@ -101,8 +93,8 @@ const ProjectCCC = () => {
                         <div class="card w-80 h-96 text-white border-2 border-accent border-opacity-75 shadow-xl">
                             <div class="card-body">
                                 <h2 class="title  text-2xl font-bold text-center mb-8">Source Code</h2>
-                                <a className=' text-info text-xl' href="https://github.com/Shahariarshadhin/Core-Computer-Castle-Client" target="_blank" rel="noreferrer">Github - Client</a>
-                                <a className=' text-info text-xl' href="https://github.com/Shahariarshadhin/Core-Computer-Castle-Server" target="_blank" rel="noreferrer">Github - Server</a>
+                                <a className=' text-info text-xl' href="https://github.com/Shahariarshadhin/Camping-Cove-Client" target="_blank" rel="noreferrer">Github - Client</a>
+                                <a className=' text-info text-xl' href="https://github.com/Shahariarshadhin/Camping-Cove-Server" target="_blank" rel="noreferrer">Github - Server</a>
 
 
                             </div>
@@ -114,4 +106,4 @@ const ProjectCCC = () => {
     );
 };
 
-export default ProjectCCC;
+export default ProjectCamCove;
